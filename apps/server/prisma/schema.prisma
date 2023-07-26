@@ -11,9 +11,28 @@ datasource db {
 }
 
 model User {
-  id    String @id @default(uuid())
-  name  String
-  email String @unique
+  id       String    @id @default(uuid())
+  name     String
+  email    String    @unique
+  password String
+  address  Address[]
 
   @@map("users")
+}
+
+model Address {
+  id         String @id @default(uuid())
+  zipCode    String
+  latitude   Float
+  longitude  Float
+  number     Int
+  complement String
+  street     String
+  city       String
+  state      String
+
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
+
+  @@map("address")
 }
