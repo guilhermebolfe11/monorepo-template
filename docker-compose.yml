@@ -1,0 +1,12 @@
+version: '3.8'
+name: monorepo
+services:
+  postgres:
+    image: bitnami/postgresql
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRESQL_USERNAME: docker
+      POSTGRESQL_PASSWORD: 123456
+      POSTGRESQL_DATABASE: monorepo
