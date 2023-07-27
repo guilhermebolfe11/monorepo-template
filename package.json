@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/guilhermebolfe11/monorepo-template.git",
-  "author": "Guilherme Bolfe <guilherme@gavea.com>",
+  "author": "Guilherme Bolfe <bolfeguilherme@gmail.com>",
   "license": "MIT",
   "private": true,
   "workspaces": {
